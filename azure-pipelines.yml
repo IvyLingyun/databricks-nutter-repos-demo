@@ -3,7 +3,7 @@
 # for PR)
 variables:
   - group: 'Ivy Testing'
-  - name: 'staging'
+  - name: 'branchName'
     ${{ if startsWith(variables['Build.SourceBranch'], 'refs/heads/') }}:
       value: $[ replace(variables['Build.SourceBranch'], 'refs/heads/', '') ]
     ${{ if startsWith(variables['Build.SourceBranch'], 'refs/pull/') }}:
